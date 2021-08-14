@@ -24,8 +24,10 @@ function AboutUs() {
                             </div>
                             <div className="px-6 mt-16">
                                 <h1 className="font-bold text-3xl text-center mb-1">Erick Flores</h1>
-                                <p className="text-gray-800 text-sm text-center">Senior Software Developer</p>
-                                <p className="text-center text-gray-600 text-base pt-3 font-normal">Experienced leader in raising a company's corporate IQ and establishing an atmosphere that promotes knowledge sharing and collaboration.</p>
+                                <p className="text-gray-800 text-sm text-center">Project Manager/Senior Software Developer</p>
+                                <p className="text-center text-gray-600 text-base pt-3 font-normal">Software development manager with extensive experience in full lifecycle software engineering, 
+                                development, programming, quality assurance, support and implementation. In-depth knowledge of software technologies, architectures and platforms, with the ability to apply them to cutting edge software, 
+                                systems and applications.</p>
                                 <div className="w-full flex justify-center pt-5 pb-5">
                                     <a href="https://github.com/ferick8246" className="mx-5">
                                         <div aria-label="Github" role="img">
@@ -71,8 +73,8 @@ function AboutUs() {
                         </div>
                         <div className="px-6 mt-16">
                             <h1 className="font-bold text-3xl text-center mb-1">Jesse Ceniceros</h1>
-                            <p className="text-gray-800 text-sm text-center">Full-Stack Developer and DevOps Engineer</p>
-                            <p className="text-center text-gray-600 text-base pt-3 font-normal">Our services encompass the assessment and repair of property damage caused by water, fire, smoke, or mold. We can also be a part of the restoration.</p>
+                            <p className="text-gray-800 text-sm text-center">Front-End Developer</p>
+                            <p className="text-center text-gray-600 text-base pt-3 font-normal">Determining the layouts of the pages and integrating mobile design.</p>
                             <div className="w-full flex justify-center pt-5 pb-5">
                                 <a href="https://github.com/Jesse2360" className="mx-5">
                                     <div aria-label="Github" role="img">
@@ -95,8 +97,8 @@ function AboutUs() {
                         <div className="px-6 mt-16">
                             <h1 className="font-bold text-3xl text-center mb-1">Kevin Henley</h1>
                             <p className="text-gray-800 text-sm text-center">Back-End Developer</p>
-                            <p className="text-center text-gray-600 text-base pt-3 font-normal">An avid open-source developer who loves to be creative and inventive. 
-                            If one portion of the team needs help with a task, I have no issue jumping in to assist on anything required.</p>
+                            <p className="text-center text-gray-600 text-base pt-3 font-normal">An avid open-source developer who loves to be creative and innovative. 
+                            If one portion of the team needs help with a task, I have no issue jumping in to assist on anything that's required.</p>
                             <div className="w-full flex justify-center pt-5 pb-5">
                                 <a href="https://github.com/KevinHenleyCode" className="mx-5">
                                     <div aria-label="Github" role="img">

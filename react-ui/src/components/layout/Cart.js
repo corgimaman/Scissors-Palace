@@ -9,7 +9,7 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './cart.css';
 
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('pk_test_51JJpIQDB4Au8Tmvc6HbqEQ5IM7LrKSJU9HM9QLAjYxUAn2jmj6ByyJxJBC421zs15BgbIIsYSX2l32BwOV5cmd7u00AOOoSF3P');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -54,10 +54,11 @@ const Cart = () => {
         productIds.push(item._id);
       }
     });
-
+    console.log(productIds);
+    console.log('About to do get checkout!!!')
     getCheckout({
       variables: { products: productIds },
-    });
+    })
   }
 
   if (!state.cartOpen) {
@@ -70,10 +71,14 @@ const Cart = () => {
     );
   }
 
+  console.log('ERR FORM CHECKOUT')
+
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [close]
+        <div className="absolute sm:relative sm:top-auto sm:right-auto ml-auto right-4 top-4 text-gray-400 hover:text-gray-800 cursor-pointer">
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </div>
       </div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
@@ -86,7 +91,7 @@ const Cart = () => {
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button onClick={submitCheckout} className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">Checkout</button>
             ) : (
               <span><br/>(log in to check out)</span>
             )}

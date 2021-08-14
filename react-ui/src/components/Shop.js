@@ -1,10 +1,8 @@
 import React, { useEffect } from "react"
-
 import MetaData from "./layout/MetaData";
-// import Product from '.Product';
-
 import { useStoreContext  } from "../utils/GlobalState";
 import Product from './Product';
+import Spinner from '../components/layout/Spinner';
 import {UPDATE_PRODUCTS} from '../utils/actions'
 import { useQuery } from '@apollo/client'
 import { QUERY_PRODUCTS } from '../utils/queries'
@@ -13,22 +11,20 @@ import { idbPromise } from '../utils/helpers'
 
 function Shop() {
 
-    const [state, dispatch] = useStoreContext();
-    console.log(state);
-
+  const [state, dispatch] = useStoreContext();
   const { currentCategory } = state;
-
   const { loading, data } = useQuery(QUERY_PRODUCTS);
+
 
   useEffect(() => {
     if (data) {
       dispatch({
         type: UPDATE_PRODUCTS,
         products: data.products,
-      });
+      })
       data.products.forEach((product) => {
         idbPromise('products', 'put', product);
-      });
+      })
     } else if (!loading) {
       idbPromise('products', 'get').then((products) => {
         dispatch({
@@ -39,15 +35,19 @@ function Shop() {
     }
   }, [data, loading, dispatch]);
 
+
   function filterProducts() {
+   
     if (!currentCategory) {
       return state.products;
     }
 
+
     return state.products.filter(
       (product) => product.category._id === currentCategory
-    );
+    )
   }
+
 
     return(
         <div className="">
@@ -72,7 +72,7 @@ function Shop() {
               <h3>You haven't added any products yet! Did you remember to seed?</h3>
               )}
             </div>
-            {loading ? <img src='' alt="loading" /> : null}
+            {loading ? <Spinner /> : null}
         </div>
     )
 }

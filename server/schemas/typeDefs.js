@@ -17,6 +17,7 @@ type Product {
 }
 
 type User {
+    _id: ID
     firstName: String
     lastName: String
     email: String
@@ -24,6 +25,7 @@ type User {
 }
 
 type Cart {
+    _id: ID
     purchaseDate: String
     products: [Product]
 }

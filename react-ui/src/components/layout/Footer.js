@@ -22,8 +22,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 justify-items-center">
           <div className="">
             <iframe
-              width="250px"
-              height="250px"
+              width="200px"
+              height="200px"
               title="map"
               className="inset-0"
               frameBorder={0}
@@ -36,9 +36,9 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg">Hours of Operation</h3>
             <br/>
-            <h4 className="font-semibold">Tuesday - Thursday:</h4> <p>10:00 - 19:00</p>
+            <h4 className="font-semibold">Tuesday - Thursday:</h4> <p>10:00am - 7:00pm</p>
             <br/>
-            <h4 className="font-semibold">Friday & Saturday:</h4> <p>11:00 - 20:00</p>
+            <h4 className="font-semibold">Friday & Saturday:</h4> <p>11:00am - 7:00pm</p>
             <br/>
             <h4 className="font-semibold">Closed Sundays</h4>
           </div>
@@ -47,9 +47,9 @@ const Footer = () => {
             <a href="tel:+12813308004">(281) 330-8004</a>
             <br/>
             <div className="space-x-5">
-            <a href="http://instagram.com/"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
-            <a href="http://facebook.com/"><FontAwesomeIcon icon={faFacebookSquare} size="lg"/></a>
-            <a href="http://twitter.com/"><FontAwesomeIcon icon={faTwitterSquare} size="lg" /></a>
+            <a href="http://instagram.com/" aria-label='link to instagram'><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
+            <a href="http://facebook.com/" aria-label='link to facebook'><FontAwesomeIcon icon={faFacebookSquare} size="lg"/></a>
+            <a href="http://twitter.com/" aria-label='link to twitter'><FontAwesomeIcon icon={faTwitterSquare} size="lg" /></a>
             </div>
           </div>
         </div>
